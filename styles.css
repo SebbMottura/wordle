@@ -1,0 +1,48 @@
+h1 {
+    text-align: center;
+}
+#gameGrid {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.boxLetter {
+    border: 3px solid black;
+    border-radius: 5px;
+    margin: 2px;
+    font-size: 2rem;
+    font-weight: 700;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+.filled-box {
+    border: 2px solid black;
+}
+.rowLetter {
+    display: flex;
+}
+#gameKeyboard {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#gameKeyboard div {
+    display: flex;
+}
+
+.middleRow {
+    margin: 0.5rem 0;
+}
+.keyboardButton {
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 1rem;
+    margin: 0 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
