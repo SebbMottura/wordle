@@ -60,8 +60,8 @@ document.addEventListener("keyup", (event) => {
 });
 
 //onscreen keyboard input
-document.getElementById("gameKeyboard").addEventListener("click", (e) => {
-  const target = e.target;
+document.getElementById("gameKeyboard").addEventListener("click", (event) => {
+  const target = event.target;
 
   if (!target.classList.contains("keyboardButton")) {
     return;
