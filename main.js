@@ -126,10 +126,8 @@ function guessChecking() {
 
     if (rightGuess[i] === letter) {
       color = "green";
-      rightGuess[i] = null;
     } else if (rightGuess.includes(letter)) {
       color = "yellow";
-      rightGuess[rightGuess.indexOf(letter)] = null;
     } else {
       color = "grey";
     }
@@ -154,7 +152,7 @@ function guessChecking() {
     if (remainingGuesses === 0) {
       if (
         confirm(
-          `Tough luck, you ran out of guesses! The correct word was ${wordToGuess}. Would you like to play again?`
+          `Tough luck, you ran out of guesses! The correct word was "${wordToGuess}". Would you like to play again?`
         )
       ) {
         resetGame();
