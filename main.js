@@ -111,22 +111,23 @@ function guessChecking() {
     document.getElementsByClassName("rowLetter")[
       numOfGuesses - remainingGuesses
     ];
-  const guessString = currentGuess.join("");
-  const rightGuess = Array.from(wordToGuess);
 
-  if (guessString.length !== 5) {
+  const guessedWord = currentGuess.join("");
+  if (guessedWord.length !== 5) {
     alert("The word must have five letters!");
     return;
   }
+
+  const wordToGuessArr = Array.from(wordToGuess);
 
   for (let i = 0; i < 5; i++) {
     const box = row.children[i];
     const letter = currentGuess[i];
     let color;
 
-    if (rightGuess[i] === letter) {
+    if (wordToGuessArr[i] === letter) {
       color = "green";
-    } else if (rightGuess.includes(letter)) {
+    } else if (wordToGuessArr.includes(letter)) {
       color = "yellow";
     } else {
       color = "grey";
@@ -135,7 +136,7 @@ function guessChecking() {
     box.style.backgroundColor = color;
   }
 
-  if (guessString === wordToGuess) {
+  if (guessedWord === wordToGuess) {
     if (
       confirm(
         "Congratulations! You guessed it right! Would you like to play again?"
